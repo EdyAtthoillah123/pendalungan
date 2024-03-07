@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </head>
 
@@ -49,11 +51,17 @@
             </div>
             <div class="row" style="margin-top: 44px;">
                 <div class="col-md-3">
-                    <div class="card"
+                    <div class="card card-service"
                         style="background-color: #FFFFFF; border: 1px solid #F9F9F9;  border-radius: 14px;">
                         <div class="card-body py-5">
-                            <img src="{{ asset('images/service/Computer.png') }}" alt="Icona"
-                                class="mb-3 img-fluid rounded-circle">
+                            <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start">
+                                <div class="stats-icon mb-2"
+                                    style="background-color:#ffffff; border-radius: 50%; width: 70px; height: 70px; padding: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); position: relative; display: flex; justify-content: center; align-items: center;">
+                                    <img src="{{ asset('images/software_service/mobile.png') }}" alt="Icona"
+                                        class="mb-3 img-fluid rounded-circle"
+                                        style="width: 28px; height: 28px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                                </div>
+                            </div>
                             <h6 class="card-title fira-sans-semibold mb-3">Pengembangan Aplikasi Mobile</h6>
                             <p class="card-text lead fira-sans-regular" style="font-size: 16px">Membuat aplikasi mobile
                                 untuk platform seperti iOS dan Android, mulai dari aplikasi konsumen</p>
@@ -61,10 +69,17 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="card"
+                    <div class="card card-service"
                         style="background-color: #FFFFFF; border: 1px solid #F9F9F9;  border-radius: 14px;">
                         <div class="card-body py-5">
-                            <img src="{{ asset('images/service/Computer.png') }}" alt="Icona" class="mb-3">
+                            <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start">
+                                <div class="stats-icon mb-2"
+                                    style="background-color:#ffffff; border-radius: 50%; width: 70px; height: 70px; padding: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); position: relative; display: flex; justify-content: center; align-items: center;">
+                                    <img src="{{ asset('images/software_service/website.png') }}" alt="Icona"
+                                        class="mb-3 img-fluid rounded-circle"
+                                        style="width: 28px; height: 28px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                                </div>
+                            </div>
                             <h6 class="card-title fira-sans-semibold mb-3">Pengembangan Aplikasi Website</h6>
                             <p class="card-text lead fira-sans-regular" style="font-size: 16px">Merancang dan
                                 mengembangkan aplikasi web untuk keperluan bisnis atau konsumen</p>
@@ -72,10 +87,17 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="card"
+                    <div class="card card-service"
                         style="background-color: #FFFFFF; border: 1px solid #F9F9F9;  border-radius: 14px;">
                         <div class="card-body py-5">
-                            <img src="{{ asset('images/service/Internet.png') }}" alt="Icona" class="mb-3">
+                            <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start">
+                                <div class="stats-icon mb-2"
+                                    style="background-color:#ffffff; border-radius: 50%; width: 70px; height: 70px; padding: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); position: relative; display: flex; justify-content: center; align-items: center;">
+                                    <img src="{{ asset('images/software_service/konsultasi.png') }}" alt="Icona"
+                                        class="mb-3 img-fluid rounded-circle"
+                                        style="width: 28px; height: 28px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                                </div>
+                            </div>
                             <h6 class="card-title fira-sans-semibold mb-3">Konsultasi Teknologi</h6>
                             <p class="card-text lead fira-sans-regular" style="font-size: 16px">Memberikan konsultasi
                                 untuk mencapai tujuan bisnis dengan perangkat lunak yang tepat.</p>
@@ -83,10 +105,17 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="card"
+                    <div class="card card-service"
                         style="background-color: #FFFFFF; border: 1px solid #F9F9F9;  border-radius: 14px;">
                         <div class="card-body py-5">
-                            <img src="{{ asset('images/service/Multimedia.png') }}" alt="Icona" class="mb-3">
+                            <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start">
+                                <div class="stats-icon mb-2"
+                                    style="background-color:#ffffff; border-radius: 50%; width: 70px; height: 70px; padding: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); position: relative; display: flex; justify-content: center; align-items: center;">
+                                    <img src="{{ asset('images/software_service/ui-design.png') }}" alt="Icona"
+                                        class="mb-3 img-fluid rounded-circle"
+                                        style="width: 28px; height: 28px; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                                </div>
+                            </div>
                             <h6 class="card-title fira-sans-semibold mb-3">Desain UI/UX</h6>
                             <p class="card-text lead fira-sans-regular" style="font-size: 16px">Merancang UI/UX demi
                                 meningkatkan kenyamanan pengguna.</p>
@@ -96,19 +125,192 @@
             </div>
         </div>
     </div>
-    <div class="section" id="portofolio">
+    <div class="section" id="portfolio">
         <div class="container mt-5">
             <div class="row">
+                <div class="swiper mb-5">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slider-1">
+                            <div>
+                                <h2>Html Css</h2>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, aliquam nam!
+                                    Labore, hic eos, fugiat possimus tempora enim magni a reiciendis molestiae tenetur
+                                    accusamus iste consequuntur cum quis in distinctio.
+                                </p>
+                                <a href="#">Explore</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slider-2">
+                            <div>
+                                <h2>Html Css</h2>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, aliquam nam!
+                                    Labore, hic eos, fugiat possimus tempora enim magni a reiciendis molestiae tenetur
+                                    accusamus iste consequuntur cum quis in distinctio.
+                                </p>
+                                <a href="#">Explore</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slider-3">
+                            <div>
+                                <h2>Html Css</h2>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, aliquam nam!
+                                    Labore, hic eos, fugiat possimus tempora enim magni a reiciendis molestiae tenetur
+                                    accusamus iste consequuntur cum quis in distinctio.
+                                </p>
+                                <a href="#">Explore</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slider-4">
+                            <div>
+                                <h2>Html Css</h2>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, aliquam nam!
+                                    Labore, hic eos, fugiat possimus tempora enim magni a reiciendis molestiae tenetur
+                                    accusamus iste consequuntur cum quis in distinctio.
+                                </p>
+                                <a href="#">Explore</a>
+                            </div>
+                        </div>
 
+                        <div class="swiper-slide slider-5">
+                            <div>
+                                <h2>Html Css</h2>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, aliquam nam!
+                                    Labore, hic eos, fugiat possimus tempora enim magni a reiciendis molestiae tenetur
+                                    accusamus iste consequuntur cum quis in distinctio.
+                                </p>
+                                <a href="#">Explore</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
         </div>
     </div>
+
+    @php
+    $image_url = asset('images/pemandangan2.jpg');
+    @endphp
+
+
+    <style>
+        .swiper {
+            width: 100%;
+            padding-top: 3.125rem;
+        }
+
+        .swiper-slide {
+            width: 18.75rem;
+            height: 28.125rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            border-radius: 5px;
+        }
+
+        .slider-1 {
+            background: linear-gradient(to top, #ff0000, #93178f, #2c5364),
+            url("{{ $image_url }}") no-repeat 50% 50%/cover;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slider-2 {
+            background: linear-gradient(to top, #fffb00, #a7ea00, #2c5364),
+            url("{{ $image_url }}") no-repeat 50% 50%/cover;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slider-3 {
+            background: linear-gradient(to top, #00ff26, #00a806, #2c5364),
+            url("{{ $image_url }}") no-repeat 50% 50%/cover;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slider-4 {
+            background: linear-gradient(to top, #fe00d8, #ff00e6, #2c5364),
+            url("{{ $image_url }}") no-repeat 50% 50%/cover;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slider-5 {
+            background: linear-gradient(to top, #00fff7, #b9fff9, #2c5364),
+            url("{{ $image_url }}") no-repeat 50% 50%/cover;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .swiper-slide div {
+            display: none;
+            opacity: 0;
+            padding-bottom: 0.625rem;
+        }
+
+        .swiper-slide-active div {
+            display: block;
+            opacity: 1;
+        }
+
+        @media screen and (min-width: 48rem) {
+            main {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        main {
+            width: 85%;
+        }
+
+        @media screen and (min-width: 93.75rem) {
+            .swiper {
+                display: flex;
+                align-items: center;
+            }
+        }
+    </style>
+
+    <script>
+        var TrandingSlider = new Swiper('.swiper', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        loop: true,
+        slidesPerView: 2,
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2.5,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        });
+    </script>
+
+
+
     <footer id="contact" style="background-color: #121212; position: relative;">
         <div class="container">
             <div class="row mt-5">
                 <div class="col-md-12">
-                    <div class="card"
-                        style="background-color: #FFFFFF; position: absolute; top: -60px; left: 50%; transform: translateX(-50%); width: 100%; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);">
+                    <div class="card card-service"
+                        style="background-color: #FFFFFF; position: absolute; top: -60px; left: 50%; right: 50%; transform: translateX(-50%);  width: 100%; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.4);">
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-9 mt-4 mb-4">
@@ -184,7 +386,8 @@
 
 
                 <div class="col-md-4" style="margin-top: 240px;">
-                    <h6 class="fira-sans-bold txt-primary" style="margin-bottom: 42px; margin-top: 66px;">Kontak</h6>
+                    <h6 class="fira-sans-bold txt-primary" style="margin-bottom: 42px; margin-top: 66px;">Kontak
+                    </h6>
                     <p class="txt-primary" style="margin-bottom: 24px;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-telephone-fill" viewBox="0 0 16 16" style="margin-right: 24px;">
@@ -215,16 +418,16 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
 </body>
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-</script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-</script>
 
 </html>
