@@ -14,8 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/service/software', function () {
     return view('service_software');
+});
+Route::get('/service/iot', function () {
+    return view('service_iot');
+});
+Route::get('/service/multimedia', function () {
+    return view('service_multimedia');
 });
 
 Route::get('/dashboard', function () {
