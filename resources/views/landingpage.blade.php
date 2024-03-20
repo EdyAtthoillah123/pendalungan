@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 </head>
 
@@ -138,7 +140,8 @@
                     </div>
                     <div class="m-3">
                         <h6>Skalabilitas Tak Terbatas</h6>
-                        <p class="card-text lead fira-sans-regular" style="font-size: 16px">Solusi kami dapat berkembang
+                        <p class="card-text lead fira-sans-regular" style="font-size: 16px">Solusi kami dapat
+                            berkembang
                             seiring pertumbuhan bisnis Anda tanpa mengorbankan kinerja atau
                             keandalan</p>
                     </div>
@@ -160,7 +163,8 @@
                     </div>
                     <div class="m-3">
                         <h6>Ketersediaan Tinggi</h6>
-                        <p class="card-text lead fira-sans-regular" style="font-size: 16px">Infrastruktur dirancang demi
+                        <p class="card-text lead fira-sans-regular" style="font-size: 16px">Infrastruktur dirancang
+                            demi
                             ketersediaan tinggi, menjaga bisnis berjalan di kondisi yang
                             menuntut</p>
                     </div>
@@ -182,72 +186,230 @@
             </div>
             <div class="row" style="margin-top: 44px;">
                 <div class="col-md-4">
-                    <div class="card text-center bg-light shadow-sm rounded-3" style="border: none;">
-                        <div class="card-body py-5">
-                            <img src="{{ asset('images/service/Computer.png') }}" alt="Icona" class="mb-3">
-                            <h6 class="card-title fira-sans-semibold mb-3">Software House</h6>
-                            <p class="card-text lead fira-sans-regular" style="font-size: 16px">Kami Mengembangkan
-                                Solusi Teknologi untuk Membangun Masa Depan
-                                Bisnis</p>
+                    <a href="{{ route('service-software') }}" class="card-link">
+                        <div class="card text-center bg-light shadow-sm rounded-3" style="border: none;">
+                            <div class="card-body py-5">
+                                <img src="{{ asset('images/service/Computer.png') }}" alt="Icona" class="mb-3">
+                                <h6 class="card-title fira-sans-semibold mb-3">Software House</h6>
+                                <p class="card-text lead fira-sans-regular" style="font-size: 16px">Kami Mengembangkan
+                                    Solusi Teknologi untuk Membangun Masa Depan Bisnis</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-md-4">
-                    <div class="card text-center bg-light shadow-sm rounded-3" style="border: none;">
-                        <div class="card-body py-5">
-                            <img src="{{ asset('images/service/Internet.png') }}" alt="Icona" class="mb-3">
-                            <h6 class="card-title fira-sans-semibold mb-3">Internet of Things</h6>
-                            <p class="card-text lead fira-sans-regular" style="font-size: 16px">Layanan IoT Kami Membuka
-                                Peluang dan Efisiensi Operasional Bisnis
-                                Anda</p>
+                    <a href="{{ route('service-iot') }}" class="card-link">
+                        <div class="card text-center bg-light shadow-sm rounded-3" style="border: none;">
+                            <div class="card-body py-5">
+                                <img src="{{ asset('images/service/Internet.png') }}" alt="Icona" class="mb-3">
+                                <h6 class="card-title fira-sans-semibold mb-3">Internet of Things</h6>
+                                <p class="card-text lead fira-sans-regular" style="font-size: 16px">Layanan IoT Kami
+                                    Membuka Peluang dan Efisiensi Operasional Bisnis Anda</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-md-4">
-                    <div class="card text-center bg-light shadow-sm rounded-3" style="border: none;">
-                        <div class="card-body py-5">
-                            <img src="{{ asset('images/service/Multimedia.png') }}" alt="Icona" class="mb-3">
-                            <h6 class="card-title fira-sans-semibold mb-3">Multimedia</h6>
-                            <p class="card-text lead fira-sans-regular" style="font-size: 16px">Kreativitas Tak Terbatas
-                                Jasa Multimedia Kami Membawa Ide-ide</p>
+                    <a href="{{ route('service-multimedia') }}" class="card-link">
+                        <div class="card text-center bg-light shadow-sm rounded-3" style="border: none;">
+                            <div class="card-body py-5">
+                                <img src="{{ asset('images/service/Multimedia.png') }}" alt="Icona"
+                                    class="mb-3">
+                                <h6 class="card-title fira-sans-semibold mb-3">Multimedia</h6>
+                                <p class="card-text lead fira-sans-regular" style="font-size: 16px">Kreativitas Tak
+                                    Terbatas Jasa Multimedia Kami Membawa Ide-ide</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
+            <style>
+                .card-link:hover .card {
+                    transform: scale(1.05);
+                    /* Memperbesar card saat hover */
+                    transition: transform 0.3s ease;
+                    /* Efek transisi */
+                }
+            </style>
         </div>
     </div>
-    <div class="section" id="portofolio">
+    <div class="section" id="portfolio">
         <div class="container mt-5">
             <div class="row">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="{{ asset('images/pemandangan.jpg') }}" class="d-block w-100" alt="...">
+                <div class="swiper mb-5">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slider-1">
+                            <div>
+                                <h2>Html Css</h2>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, aliquam nam!
+                                    Labore, hic eos, fugiat possimus tempora enim magni a reiciendis molestiae tenetur
+                                    accusamus iste consequuntur cum quis in distinctio.
+                                </p>
+                                <a href="#">Explore</a>
+                            </div>
                         </div>
-                        <div class="carousel-item">
-                            <img src="{{ asset('images/pemandangan.jpg') }}" class="d-block w-100" alt="...">
+                        <div class="swiper-slide slider-2">
+                            <div>
+                                <h2>Html Css</h2>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, aliquam nam!
+                                    Labore, hic eos, fugiat possimus tempora enim magni a reiciendis molestiae tenetur
+                                    accusamus iste consequuntur cum quis in distinctio.
+                                </p>
+                                <a href="#">Explore</a>
+                            </div>
                         </div>
-                        <div class="carousel-item">
-                            <img src="{{ asset('images/pemandangan.jpg') }}" class="d-block w-100" alt="...">
+                        <div class="swiper-slide slider-3">
+                            <div>
+                                <h2>Html Css</h2>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, aliquam nam!
+                                    Labore, hic eos, fugiat possimus tempora enim magni a reiciendis molestiae tenetur
+                                    accusamus iste consequuntur cum quis in distinctio.
+                                </p>
+                                <a href="#">Explore</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide slider-4">
+                            <div>
+                                <h2>Html Css</h2>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, aliquam nam!
+                                    Labore, hic eos, fugiat possimus tempora enim magni a reiciendis molestiae tenetur
+                                    accusamus iste consequuntur cum quis in distinctio.
+                                </p>
+                                <a href="#">Explore</a>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide slider-5">
+                            <div>
+                                <h2>Html Css</h2>
+                                <p>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, aliquam nam!
+                                    Labore, hic eos, fugiat possimus tempora enim magni a reiciendis molestiae tenetur
+                                    accusamus iste consequuntur cum quis in distinctio.
+                                </p>
+                                <a href="#">Explore</a>
+                            </div>
                         </div>
                     </div>
-                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>
     </div>
+
+    @php
+    $image_url = asset('images/pemandangan2.jpg');
+    @endphp
+
+
+    <style>
+        .swiper {
+            width: 100%;
+            padding-top: 3.125rem;
+        }
+
+        .swiper-slide {
+            width: 18.75rem;
+            height: 28.125rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-start;
+            border-radius: 5px;
+        }
+
+        .slider-1 {
+            background: linear-gradient(to top, #ff0000, #93178f, #2c5364),
+            url("{{ $image_url }}") no-repeat 50% 50%/cover;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slider-2 {
+            background: linear-gradient(to top, #fffb00, #a7ea00, #2c5364),
+            url("{{ $image_url }}") no-repeat 50% 50%/cover;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slider-3 {
+            background: linear-gradient(to top, #00ff26, #00a806, #2c5364),
+            url("{{ $image_url }}") no-repeat 50% 50%/cover;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slider-4 {
+            background: linear-gradient(to top, #fe00d8, #ff00e6, #2c5364),
+            url("{{ $image_url }}") no-repeat 50% 50%/cover;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slider-5 {
+            background: linear-gradient(to top, #00fff7, #b9fff9, #2c5364),
+            url("{{ $image_url }}") no-repeat 50% 50%/cover;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .swiper-slide div {
+            display: none;
+            opacity: 0;
+            padding-bottom: 0.625rem;
+        }
+
+        .swiper-slide-active div {
+            display: block;
+            opacity: 1;
+        }
+
+        @media screen and (min-width: 48rem) {
+            main {
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        main {
+            width: 85%;
+        }
+
+        @media screen and (min-width: 93.75rem) {
+            .swiper {
+                display: flex;
+                align-items: center;
+            }
+        }
+    </style>
+
+    <script>
+        var TrandingSlider = new Swiper('.swiper', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        loop: true,
+        slidesPerView: 2,
+        coverflowEffect: {
+            rotate: 0,
+            stretch: 0,
+            depth: 100,
+            modifier: 2.5,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        });
+    </script>
     <div class="section" id="testimoni">
         <div class="container mt-5">
             <div class="row">
@@ -271,7 +433,8 @@
             <div class="row">
                 <div class="col-md-4">
                     <div style="display: flex; margin-top: 24px;">
-                        <img src="{{ asset('images/footer/Logo.png') }}" alt="Footer quote icon" class="img-fluid mt-3">
+                        <img src="{{ asset('images/footer/Logo.png') }}" alt="Footer quote icon"
+                            class="img-fluid mt-3">
                         <div class="d-flex align-items-center justify-content-center mt-4 ml-3">
                             <h2 class="fira-sans-extrabold txt-primary">Pendalungan</h2>
                         </div>
@@ -356,13 +519,12 @@
                     <p class="txt-primary text-right" style="margin-top: 76px;">© Copyright Pendalungan Megah Solusi
                     </p>
                 </div>
-
-
             </div>
         </div>
     </footer>
 </body>
 
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
 </script>
@@ -372,5 +534,4 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
 </script>
-
 </html>

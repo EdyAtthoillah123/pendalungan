@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\KatalogController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +18,19 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('landingpage');
+});
+
+Route::controller(ServiceController::class)->prefix('/service')->group(function () {
+    Route::get('/iot', 'iot')->name('service-iot');
+    Route::get('/multimedia', 'multimedia')->name('service-multimedia');
+    Route::get('/software', 'software')->name('service-software');
+});
+
+Route::controller(KatalogController::class)->prefix('/katalog')->group(function () {
+    Route::get('/', 'index')->name('katalog');
+    Route::post('/store', 'store')->name('katalog-store');
+    Route::patch('/update', 'update')->name('katalog-update');
+    Route::delete('/store', 'destroy')->name('katalog-destroy');
 });
 
 Route::get('/dashboard', function () {

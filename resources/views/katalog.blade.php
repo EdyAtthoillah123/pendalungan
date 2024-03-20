@@ -18,26 +18,42 @@
     <div class="section" id="service">
         <div class="container mt-5">
             <div class="row" style="margin-top: 44px;">
-                <div class="col-md-4">
-                    <div class="card card-service"
-                        style="background-color: #FFFFFF; border: 1px solid #F9F9F9;  border-radius: 14px;">
-                        <div class="card-body py-5">
-                            <img src="{{ asset('images/katalog/arduino.jpg') }}" class="card-img-top" alt="Arduino UNO Image">
-                            <div class="card-body">
-                                <h5 class="card-title">Arduino Uno</h5>
-                                <p>Arduino Uno </p><br>
-                                <div class="d-flex justify-content-between">
-                                    <p class="card-text">Harga: Rp. 150.000</p>
-                                    <a href="" class="btn btn-secondary" style="background-color: #000000;">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
-                                          </svg>
-                                    </a>
+                @foreach ($data as $item)
+                    <div class="col-md-4">
+                        <div class="card card-service"
+                            style="background-color: #FFFFFF; border: 1px solid #F9F9F9;  border-radius: 14px;">
+                            <div class="card-body py-5">
+                                <img src="{{ $item->image }}" class="card-img-top" alt="Arduino UNO Image">
+                                <div class="card-body">
+                                    <h5 class="card-title"></h5>
+                                    <h1>{{ $item->name_product }}</h1>
+                                    <p id="shortDescription{{ $item->id }}">
+                                        {{ Str::limit($item->description, 20) }}</p>
+                                    <button onclick="showFullDescription({{ $item->id }})">Selengkapnya</button>
+                                    <p id="fullDescription{{ $item->id }}" style="display: none;">
+                                        {{ $item->description }}</p>
+                                    <script>
+                                        function showFullDescription(itemId) {
+                                            document.getElementById("shortDescription" + itemId).style.display = "none";
+                                            document.getElementById("fullDescription" + itemId).style.display = "block";
+                                        }
+                                    </script>
+
+                                    <div class="d-flex justify-content-between">
+                                        <p class="card-text">Harga: Rp. {{ $item->price }}</p>
+                                        <a href="" class="btn btn-secondary" style="background-color: #000000;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                                            </svg>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
