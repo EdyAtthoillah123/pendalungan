@@ -29,11 +29,12 @@
                                     <h1>{{ $item->name_product }}</h1>
                                     <p id="shortDescription{{ $item->id }}">
                                         {{ Str::limit($item->description, 20) }}</p>
-                                    <button onclick="showFullDescription({{ $item->id }})">Selengkapnya</button>
+                                    <button id="buttonDescription{{ $item->id }}" onclick="showFullDescription({{ $item->id }})">Selengkapnya</button>
                                     <p id="fullDescription{{ $item->id }}" style="display: none;">
                                         {{ $item->description }}</p>
                                     <script>
                                         function showFullDescription(itemId) {
+                                            document.getElementById("buttonDescription" + itemId).style.display = "none";
                                             document.getElementById("shortDescription" + itemId).style.display = "none";
                                             document.getElementById("fullDescription" + itemId).style.display = "block";
                                         }

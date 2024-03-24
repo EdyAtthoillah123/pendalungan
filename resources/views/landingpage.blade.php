@@ -57,7 +57,7 @@
                         peralatan berkualitas
                         kami. Mulai petualangan visual Anda sekarang!</p>
 
-                    <button class="start-project-button">Start a Project</button>
+                    <a class="start-project-button" href="{{ route('katalog') }}"   >Start a Project</a>
                 </div>
                 <div class="col-md-6 col-lg-6">
                     <div class="jumbotron_img">
@@ -83,7 +83,7 @@
                         pada pengembangan solusi terkini dalam bidang multimedia, software, dan IoT. Dengan tim yang
                         terampil dan berpengalaman, kami bertekad untuk memberikan solusi yang tepat dan inovatif bagi
                         setiap klien kami.</p>
-                    <a class="button-about"><span>Selengkapnya</span></a>
+                    <a class="button-about" ><span>Selengkapnya</span></a>
                 </div>
             </div>
         </div>
